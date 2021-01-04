@@ -28,22 +28,19 @@ const App = () => {
 
 
 
-
-
 function Home({ navigation }) {
   const [count, setCount] = useState(0)
   React.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-       <View>
-          <Button onPress={()=>setCount(count=>count+1)} title="INCERMENT" />
-          <Button onPress={()=>setCount(count=>count-1)} title="DECREMENT" />
-
-       </View>
+        <View>
+          <Button onPress={() => setCount(count => count + 1)} title="INCERMENT" />
+          <Button onPress={() => setCount(count => count - 1)} title="DECREMENT" />
+        </View>
       )
     })
   }, [navigation, setCount])
-  let data = { name: 'riddhi', email: 'riddhi@gmail.com' }
+  let data = { name:'riddhi', email:'riddhi@gmail.com' }
   return (
     <View>
       <Text style={{ fontSize: 50, color: '#ff69b4', margin: 20, padding: 20, textAlign: 'center' }}>Home Page</Text>
